@@ -15,5 +15,13 @@ ActiveAdmin.register SlideImage do
   #   permitted
   # end
 
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :location, :as => :file
+      f.input :description
 
+    end
+    f.actions
+  end
 end

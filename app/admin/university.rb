@@ -15,5 +15,17 @@ ActiveAdmin.register University do
   #   permitted
   # end
 
+  form do |f|
+    f.inputs do
+      f.input :university_cate_id, :as => :select, :collection => UniversityCate.all, :label => "Category"
+      f.input :name
+      f.input :establish_year, :label => "Establish Year"
+      f.input :address
+      f.input :contact
+      f.input :image, :as => :file
+      f.input :description
 
+    end
+    f.actions
+  end
 end
