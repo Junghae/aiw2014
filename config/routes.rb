@@ -2,6 +2,19 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'home/index'
+  get 'home/introduction'
+  get 'home/news'
+  get 'home/asia'
+  get 'home/europe'
+  get 'home/america'
+  get 'home/australia'
+  get 'home/ranking'
+  get 'home/contact'
+
+
+
+
+
   get 'home/sample'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

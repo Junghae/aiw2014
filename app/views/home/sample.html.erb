@@ -3,16 +3,12 @@
     <div class="">
       <div class="container">
         <nav class="top-menu">
-          <ul class="left-top-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Site Map</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul><!-- /.left-top-menu -->
+
 
           <ul class="right-top-menu pull-right">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Subscribe</a></li>
+
+            <li><a href="#">Đăng nhập</a></li>
+            <li><a href="#">Đăng ký</a></li>
             <li>
               <form class="form-inline" role="form" action="#">
                 <input type="search" placeholder="Search here..." required>
@@ -31,14 +27,16 @@
     <div class="container">
       <div class="site-logo">
         <a href="index.html" class="navbar-brand">
-          <img src="<%= image_path("logo.png") %>" alt="Side Logo" />
-          <h1>Daily <span>News</span></h1>
-          <h3>The Daily News Source</h3>
+          <img src="img/logo.png" alt="Side Logo" />
+          <h1>Top <span>Universities</span></h1>
+
         </a>
       </div> <!-- / .navbar-header -->
 
       <div class="add-space">
-        728 x 90 px Banner
+
+        Worldwide university rankings, guides & events
+
       </div> <!-- / .adspace -->
 
     </div>	<!-- /.container -->
@@ -58,47 +56,39 @@
 
         <div class="collapse navbar-collapse ccr-nav-main">
           <ul class="nav navbar-nav">
-            <li><a class="active" href="index.html">Home</a></li>
+            <li class="">
+              <a href="index.html">Trang Chủ <i class=""></i></a>
+            </li>
+            <li class="">
+              <a href="intro.html">Giới Thiệu<i class=""></i></a>
+            </li>
+            <li class="">
+              <a href="news.html">Tin Tức<i class=""></i></a>
+            </li>
             <li class="dropdown">
-              <a href="#">Blog <i class="fa fa-caret-down"></i></a>
+              <a href="#">Khu Vực <i class="fa fa-caret-down"></i></a>
               <ul class="sub-menu">
-                <li><a href="blog.html">Blog 1</a></li>
-                <li><a href="blog-2.html">Blog 2</a></li>
-                <li><a href="blog-3.html">Blog 3</a></li>
+                <li><a href="Asia.html">Châu Á</a></li>
+                <li><a href="Uc.html">Châu Úc</a></li>
+                <li><a href="American.html">Châu Mỹ</a></li>
+                <li><a href="Europe.html">Châu Âu</a></li>
               </ul><!-- /.sub-menu -->
             </li><!-- /.dropdown -->
-            <li><a href="single.html">Single</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="dropdown"><a href="#">Category <i class="fa fa-caret-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="category-1.html">Category 1</a></li>
-                <li><a href="category-2.html">Category 2</a></li>
-                <li><a href="#">More <i class="fa fa-caret-right"></i></a>
-                  <ul class="sub-menu-2">
-                    <li><a href="#">Demo Link 1</a></li>
-                    <li><a href="#">Demo Link 2</a></li>
 
-                    <li><a href="#">More <i class="fa fa-caret-right"></i></a>
-                      <ul class="sub-menu-3">
-                        <li><a href="#">Demo Link 1</a></li>
-                        <li><a href="#">Demo Link 2</a></li>
-                        <li><a href="#">Demo Link 3</a></li>
-                      </ul><!-- /.sub-menu-3 -->
-                    </li>
-                    <li><a href="#">Demo Link 3</a></li>
-                  </ul><!-- /.sub-menu-2 -->
-                </li>
-              </ul><!-- /.sub-menu -->
-            </li><!--  /.dropdown -->
-            <li><a href="404.html">404</a></li>
+
+            <li class="">
+              <a href="ranking.html">Xếp Hạng <i class=""></i></a>
+
+            </li><!-- /.dropdown -->
+
+
+            <li class="">
+              <a href="contact.html">Liên Hệ <i class=""></i></a>
+            </li>
           </ul> <!-- /  .nav -->
         </div><!-- /  .collapse .navbar-collapse  -->
 
-        <div id="currentTime" class="pull-right current-time">
-          <i class="fa fa-clock-o"></i> 12:10 pm
 
-
-        </div><!-- / #currentTime -->
 
       </div>	<!-- /.container -->
     </nav> <!-- /.main-menu -->
@@ -116,24 +106,7 @@
           </button> <!-- /.navbar-toggle -->
         </div> <!-- / .navbar-header -->
 
-        <div class="collapse navbar-collapse ccr-nav-below-main">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Europe</a></li>
-            <li><a href="#">USA</a></li>
-            <li><a href="#">Middle East</a></li>
-            <li><a href="#">Social and IT</a></li>
-            <li><a href="#">Culture</a></li>
-          </ul> <!-- /.nav /.navbar-nav -->
-        </div>
 
-        <div class="ccr-language">
-          <ul>
-            <li>Language:</li>
-            <li><a href="#"><img src="<%= image_path("uk.png") %>" alt="UK">English</a></li>
-            <li><a href="#"><img src="<%= image_path("france.png") %>" alt="France">France</a></li><li>
-            <a href="#"><img src="<%= image_path("garman.png") %>" alt="Garman">Garman</a></li>
-          </ul>
-        </div> <!-- /.ccr-language -->
       </div><!-- /.container -->
     </nav><!-- /.second-menu -->
   </section><!-- / #ccr-nav-below-main -->
@@ -151,12 +124,12 @@
 
 
 <div class="ccr-last-update">
-  <div class="update-ribon">Last Update</div> <!-- /.update-ribon -->
+  <div class="update-ribon">Bài viết mới</div> <!-- /.update-ribon -->
   <span class="update-ribon-right"></span> <!-- /.update-ribon-left -->
   <div class="update-news-text" id="update-news-text">
     <ul id="latestUpdate">
-      <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-      <li><a href="#">Two</a></li>
+      <li><a href="#">Top 100 trường đại học tốt nhất trên thế giới</a></li>
+      <li><a href="#">ọc tốt nhất trên thế giới</a></li>
       <li><a href="#">Three</a></li>
       <li><a href="#">Four</a></li>
       <li><a href="#">Five</a></li>
@@ -173,29 +146,29 @@
   <div class="carousel-inner">
     <div class="active item">
       <div class="container slide-element">
-        <img src="<%= image_path("slide/main-slide-1.jpg") %>" alt="Main Slide Image 1">
-        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
+        <img src="img/slide/pic1.jpg" alt="Main Slide Image 1">
+        <p><a href="#">Khuôn viên Trường Đại học Oxford</a></p>
       </div> <!-- /.slide-element -->
     </div> <!--/.active /.item -->
 
     <div class="item">
       <div class="container slide-element">
-        <img src="<%= image_path("slide/main-slide-2.jpg") %>" alt="Main Slide Image 1">
-        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
-      </div> <!-- /.slide-element -->
-    </div> <!--  /.item -->
-
-    <div class="item">
-      <div class="container slide-element">
-        <img src="<%= image_path("slide/main-slide-3.jpg") %>" alt="Main Slide Image 1">
-        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
+        <img src="img/slide/pic2.jpg" alt="Main Slide Image 1">
+        <p><a href="#">Đại học Cambridge</a></p>
       </div> <!-- /.slide-element -->
     </div> <!-- .item -->
 
     <div class="item">
       <div class="container slide-element">
-        <img src="<%= image_path("slide/main-slide-4.jpg") %>" alt="Main Slide Image 1">
-        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
+        <img src="img/slide/pic3.jpg" alt="Main Slide Image 1">
+        <p><a href="#">Đại học London</a></p>
+      </div> <!-- /.slide-element -->
+    </div> <!-- .item -->
+
+    <div class="item">
+      <div class="container slide-element">
+        <img src="img/slide/pic4.jpg" alt="Main Slide Image 1">
+        <p><a href="#">Lễ tốt nghiệp Đại học Harvard năm 2013</a></p>
       </div> <!-- /.slide-element -->
     </div> <!-- /.item -->
 
@@ -222,53 +195,30 @@
 <section id="ccr-latest-post-gallery">
   <div class="ccr-gallery-ttile">
     <span></span>
-    <p>Others Latest Post Gallery</p>
+    <p>TIN TỨC</p>
   </div><!-- .ccr-gallery-ttile -->
 
 
   <ul class="ccr-latest-post">
     <li>
       <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail1.jpg") %>" alt="Thumbnail 1">
-        <p><a href="#postlink">Read More</a></p>
+        <img src="img/thumbnail1.jpg" alt="Thumbnail 1">
+        <p><a href="#postlink">Đọc thêm</a></p>
       </div>
-      <h4><a href="#postlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
+      <h4><a href="#postlink">
+        Top 100 Trường Đại Học Tốt Nhất Thế Giới
+      </a></h4>
     </li>
     <li>
       <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail2.jpg") %>" alt="Thumbnail 1">
-        <p><a href="#postlink">Read More</a></p>
+        <img src="img/thumbnail2.jpg" alt="Thumbnail 1">
+        <p><a href="#postlink">Đọc thêm</a></p>
       </div>
-      <h4><a href="#postlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
+      <h4><a href="#postlink">
+        10 trường Cao đẳng nghệ thuật tốt nhất thế giới
+      </a></h4>
     </li>
-    <li>
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail3.jpg") %>" alt="Thumbnail 1">
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h4><a href="#postlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
-    </li>
-    <li>
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail4.jpg") %>" alt="Thumbnail 1">
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h4><a href="#postlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
-    </li>
-    <li>
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail5.jpg") %>" alt="Thumbnail 1">
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h4><a href="#postlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
-    </li>
-    <li>
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail6.jpg") %>" alt="Thumbnail 1">
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h4><a href="#postlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h4>
-    </li>
+
   </ul> <!-- /.ccr-latest-post -->
 
 </section> <!--  /#ccr-latest-post-gallery  -->
@@ -278,116 +228,20 @@
 
 
 
-
-<section id="ccr-world-news">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p>World News</p>
-  </div> <!-- .ccr-gallery-ttile -->
-
-  <section class="featured-world-news">
-    <div class="featured-world-news-img"><img src="<%= image_path("thumbnail-big1.jpg") %>" alt="Thumb"></div>
-    <div class="featured-world-news-post">
-      <h5>Featured World News Post Title</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quod, nostrum, corrupti, maxime quis doloribus debitis id consectetur laudantium iure aperiam soluta consequuntur modi accusamus molestias. Ab veniam atque eius...
-      <div class="like-comment-readmore">
-        <i class="fa fa-thumbs-o-up"> 08</i>
-        <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
-        <a class="read-more" href="#">Read More</a>
-      </div> <!-- /.like-comment-readmore -->
-    </div>
-  </section> <!-- /#featured-world-news -->
-
-
-  <ul>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-1.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-2.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-3.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-4.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-5.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-6.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-7.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("thumbnail-small-8.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-  </ul>
-
-</section> <!-- / #ccr-world-news -->
-
-
-
-
-<section class="bottom-border"></section>
-
 <section id="ccr-sports-gallery">
   <div class="ccr-gallery-ttile">
     <span></span>
-    <p>Sports Gallery</p>
+    <p><a href="American.html"> CHÂU Á</a></p>
   </div> <!-- .ccr-gallery-ttile -->
 
   <section class="featured-sports-news">
-    <div class="featured-sports-newss-img"><img src="<%= image_path("sports-thumb-1.jpg") %>" alt="Thumb"></div>
+    <div class="featured-sports-newss-img"><img src="img/hongkong.jpg" alt="Thumb"></div>
     <div class="featured-sports-news-post">
-      <h5>Featured Sports News Post Title</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quod, nostrum, corrupti, maxime quis doloribus debitis id consectetur laudantium iure aperiam soluta consequuntur modi accusamus molestias. Ab veniam atque eius...
+      <h5>Đại học Hồng Kông </h5>
+      HKU có 10 khoa, 2 trường chuyên ngành và nhiều trung tâm học tập nghiên cứu. Trường Giáo Dục Chuyên môn thường xuyên (SPACE) của HKU được đánh giá là đơn vị cung cấp chương trình giáo dục thường xuyên bậc đại học lớn nhất Hồng Kông. Với đội ngũ cán bộ giảng viên hùng hậu trên 1400 người
       <div class="like-comment-readmore">
-        <i class="fa fa-thumbs-o-up"> 08</i>
-        <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
-        <a class="read-more" href="#">Read More</a>
+
+        <a class="read-more" href="#">Đọc thêm</a>
       </div> <!-- /.like-comment-readmore -->
     </div>
   </section> <!-- /#featured-sports-news -->
@@ -396,91 +250,147 @@
     <li>
 
       <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-2.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
+        <img src="img/backinh.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
       </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
+      <h5><a href="#">Đại học Bắc Kinh</a></h5>
     </li>
     <li>
 
       <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-3.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
+        <img src="img/seoul.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
       </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
+      <h5><a href="#">Đại học Quốc Gia Seoul</a></h5>
+    </li>
+
+  </ul>
+
+</section> <!-- /#ccr-sports-gallery -->
+<section class="bottom-border"></section>
+
+<section id="ccr-sports-gallery">
+  <div class="ccr-gallery-ttile">
+    <span></span>
+    <p><a href="American.html"> CHÂU MỸ</a></p>
+  </div> <!-- .ccr-gallery-ttile -->
+
+  <section class="featured-sports-news">
+    <div class="featured-sports-newss-img"><img src="img/harvard.jpg" alt="Thumb"></div>
+    <div class="featured-sports-news-post">
+      <h5>Đại học Harvard </h5>
+      Viện Đại học Harvard (tiếng Anh: Harvard University), còn gọi là Đại học Harvard, là một viện đại học nghiên cứu tư thục, thành viên của Liên đoàn Ivy, ở Cambridge, Massachusetts, Hoa Kỳ. Với lịch sử, tầm ảnh hưởng, và tài sản của mình, Harvard là một trong những viện đại học danh tiếng nhất thế giới
+      <div class="like-comment-readmore">
+
+        <a class="read-more" href="#">Đọc thêm</a>
+      </div> <!-- /.like-comment-readmore -->
+    </div>
+  </section> <!-- /#featured-sports-news -->
+
+  <ul>
+    <li>
+
+      <div class="ccr-thumbnail">
+        <img src="img/mit.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
+      </div>
+      <h5><a href="#">Đại học MIT</a></h5>
     </li>
     <li>
 
       <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-4.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
+        <img src="img/standford.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
       </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
+      <h5><a href="#">Đại học Standford</a></h5>
     </li>
-    <li>
 
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-5.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-6.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-7.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-8.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-9.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-10.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="<%= image_path("sports-thumb-11.jpg") %>" alt="thumbnail-small-1.jpg" />
-        <p><a href="#postlink">Read More</a></p>
-      </div>
-      <h5><a href="#">Lorem ipsum is simply dummy text...</a></h5>
-    </li>
   </ul>
 
 </section> <!-- /#ccr-sports-gallery -->
 
 <section class="bottom-border"></section>
 
+<section id="ccr-sports-gallery">
+  <div class="ccr-gallery-ttile">
+    <span></span>
+    <p><a href="Europe.html"> CHÂU ÂU</a></p>
+  </div> <!-- .ccr-gallery-ttile -->
 
+  <section class="featured-sports-news">
+    <div class="featured-sports-newss-img"><img src="img/cambridge.jpg" alt="Thumb"></div>
+    <div class="featured-sports-news-post">
+      <h5>Đại học Cambridge</h5>
+      Viện Đại học Cambridge hay Đại học Cambridge là viện đại học nghiên cứu công lập tọa lạc tại Cambridge, Anh Quốc. Đây là viện đại học lâu đời thứ hai trong thế giới nói tiếng Anh, và là viện đại học lâu đời thứ ba trên thế giới hiện đang hoạt động
+      <div class="like-comment-readmore">
 
+        <a class="read-more" href="#">Đọc thêm</a>
+      </div> <!-- /.like-comment-readmore -->
+    </div>
+  </section> <!-- /#featured-sports-news -->
+
+  <ul>
+    <li>
+
+      <div class="ccr-thumbnail">
+        <img src="img/oxford.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
+      </div>
+      <h5><a href="#">Đại học MIT</a></h5>
+    </li>
+    <li>
+
+      <div class="ccr-thumbnail">
+        <img src="img/uclan.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
+      </div>
+      <h5><a href="#">Đại học Standford</a></h5>
+    </li>
+
+  </ul>
+
+</section> <!-- /#ccr-sports-gallery -->
+<section class="bottom-border"></section>
+
+<section id="ccr-sports-gallery">
+  <div class="ccr-gallery-ttile">
+    <span></span>
+    <p><a href="Uc.html"> CHÂU ÚC</a></p>
+  </div> <!-- .ccr-gallery-ttile -->
+
+  <section class="featured-sports-news">
+    <div class="featured-sports-newss-img"><img src="img/Queensland.jpg" alt="Thumb"></div>
+    <div class="featured-sports-news-post">
+      <h5>Đại học Queensland </h5>
+      Đại học Queensland (The University of Queensland – UQ) được thành lập theo luật của Quốc hội Australia ngày 10/12/1909 để kỷ niệm 50 năm ngày thành phố Queensland được tách khỏi thuộc địa New South Wale. Đến năm 1911, UQ đón 83 sinh viên đầu tiên.
+      <div class="like-comment-readmore">
+        <a class="read-more" href="Queensland.html">Đọc thêm</a>
+      </div> <!-- /.like-comment-readmore -->
+    </div>
+  </section> <!-- /#featured-sports-news -->
+
+  <ul>
+    <li>
+
+      <div class="ccr-thumbnail">
+        <img src="img/UNSW.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
+      </div>
+      <h5><a href="#">Đại học New South Wales</a></h5>
+    </li>
+    <li>
+
+      <div class="ccr-thumbnail">
+        <img src="img/Monash.jpg" alt="thumbnail-small-1.jpg">
+        <p><a href="#postlink">Đọc thêm</a></p>
+      </div>
+      <h5><a href="#">Đại học Monash</a></h5>
+    </li>
+
+  </ul>
+
+</section> <!-- /#ccr-sports-gallery -->
+<section class="bottom-border"></section>
 
 
 
@@ -491,253 +401,151 @@
 
 
 <aside id="ccr-right-section" class="col-md-4 ccr-home">
-<section id="social-buttons">
-  <ul>
-    <li>
-      <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
 
-      <p><span class="bubble"></span><span class="count">202</span> Like</p>
-    </li>
-    <li>
-      <a href="#"  class="linkedin"><i class="fa fa-linkedin"></i></a>
-      <p><span class="bubble"></span><span class="count">202</span> Like</p>
-    </li>
-    <li>
-      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-      <p><span class="bubble"></span><span class="count">202</span> Follow</p>
-    </li>
-    <li>
-      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-      <p><span class="bubble"></span><span class="count">202</span> Like</p>
-    </li>
-  </ul>
+  <section id="sidebar-older-post">
+    <div class="ccr-gallery-ttile">
+      <span></span>
+      <p><strong>Bài đọc nhiều nhất</strong></p>
+    </div> <!-- .ccr-gallery-ttile -->
+    <ul>
+      <li>
+        <img src="img/top10.jpg" alt="Avatar">
+        <a href="#">10 trường Cao đẳng nghệ thuật tốt nhất thế giới</a>
+        <div class="date-like-comment">
+          <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+          <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+          <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/thumbnail-small-7.jpg" alt="Avatar">
+        <a href="#">Những lời khuyên sinh viên năm nhất không thể bỏ qua </a>
+        <div class="date-like-comment">
+          <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+          <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+          <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/top15.jpg" alt="Avatar">
+        <a href="#">Top 15 trường đại học hàng đầu thế giới</a>
+        <div class="date-like-comment">
+          <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+          <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+          <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/3lydo.png" alt="Avatar">
+        <a href="#">3 lý do nên học giỏi tiếng Anh</a>
+        <div class="date-like-comment">
+          <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+          <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+          <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+        </div>
+      </li>
+      <li>
+        <img src="img/thumbnail-small-5.jpg" alt="Avatar">
+        <a href="#">Top 100 Trường Đại Học Tốt Nhất Thế Giới</a>
+        <div class="date-like-comment">
+          <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+          <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+          <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+        </div>
+      </li>
+    </ul>
 
-</section>  <!-- /#social-buttons -->
+  </section> <!-- /#sidebar-older-post -->
 
-<section id="sidebar-popular-post">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><strong>Popular Post</strong></p>
-  </div> <!-- .ccr-gallery-ttile -->
-  <ul>
-    <li>
-      <img src="<%= image_path("sports-thumb-10.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("thumbnail-small-7.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("sports-thumb-5.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("thumbnail-small-2.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("thumbnail-small-5.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-  </ul>
+  <section id="sidebar-video-post">
+    <div class="ccr-gallery-ttile">
+      <span></span>
+      <p><strong>Video Post</strong></p>
+    </div> <!-- .ccr-gallery-ttile -->
 
-</section> <!-- /#sidebar-popular-post -->
+    <div class="sidebar-video">
 
-<section id="sidebar-video-post">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><strong>Video Post</strong></p>
-  </div> <!-- .ccr-gallery-ttile -->
+      <iframe width="340" height="195"
+              src="//www.youtube.com/embed/yVQZpAwpcTw" frameborder="0" allowfullscreen></iframe>
+      Top 10 Universities In the World 2013-2014
+    </div>
 
-  <div class="sidebar-video">
-    <iframe width="340" height="195" src="//www.youtube.com/embed/Ak8f8yTPRRc" frameborder="0" allowfullscreen></iframe>
-    CodexCoder creates spectacular Premium WordPress Themes, WordPress Plugins, HTML Templates, PSD Template and more...
-  </div>
-  <div class="date-like-comment">
-    <a href="#" class="like"><i class="fa fa-thumbs-o-up"></i> 08</a>
-    <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
-  </div>
-</section>  <!-- /#sidebar-video-post -->
+  </section>  <!-- /#sidebar-video-post -->
 
-<section id="ccr-calender">
+  <section id="ccr-calender">
 
-  <table id="calendar">
-    <caption >February 2014</caption>
-    <thead data-iceapc="1">
-    <tr>
-      <th scope="col" title="Monday">M</th>
-      <th scope="col" title="Tuesday">T</th>
-      <th scope="col" title="Wednesday">W</th>
-      <th scope="col" title="Thursday">T</th>
-      <th scope="col" title="Friday">F</th>
-      <th scope="col" title="Saturday">S</th>
-      <th scope="col" title="Sunday">S</th>
-    </tr>
-    </thead>
+    <table id="calendar">
+      <caption >February 2014</caption>
+      <thead data-iceapc="1">
+      <tr>
+        <th scope="col" title="Monday">M</th>
+        <th scope="col" title="Tuesday">T</th>
+        <th scope="col" title="Wednesday">W</th>
+        <th scope="col" title="Thursday">T</th>
+        <th scope="col" title="Friday">F</th>
+        <th scope="col" title="Saturday">S</th>
+        <th scope="col" title="Sunday">S</th>
+      </tr>
+      </thead>
 
-    <tfoot data-iceapc="4">
-    <tr data-iceapc="3">
-      <td colspan="3" id="prev"><a href="#" title="Previous">&laquo; Jan</a></td>
-      <td class="pad">&nbsp;</td>
-      <td colspan="3" id="next" class="pad"><a href="#" title="Next">Mar &raquo;</a></td>
-    </tr>
-    </tfoot>
+      <tfoot data-iceapc="4">
+      <tr data-iceapc="3">
+        <td colspan="3" id="prev"><a href="#" title="Previous">&laquo; Jan</a></td>
+        <td class="pad">&nbsp;</td>
+        <td colspan="3" id="next" class="pad"><a href="#" title="Next">Mar &raquo;</a></td>
+      </tr>
+      </tfoot>
 
-    <tbody>
-    <tr>
-      <td></td><td></td><td></td><td></td><td></td><td>1</td><td >2</td>
-    </tr>
-    <tr>
-      <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
-    </tr>
-    <tr>
-      <td>10</td><td>11</td><td>12</td><td>13</td><td><a href="#" title="Post">14</a></td><td>15</td><td>16</td>
-    </tr>
-    <tr>
-      <td>17</td><td id="today">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
-    </tr>
-    <tr>
-      <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
-      <td></td><td></td>
-    </tr>
-    </tbody>
-  </table>
+      <tbody>
+      <tr>
+        <td></td><td></td><td></td><td></td><td></td><td>1</td><td >2</td>
+      </tr>
+      <tr>
+        <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+      </tr>
+      <tr>
+        <td>10</td><td>11</td><td>12</td><td>13</td><td><a href="#" title="Post">14</a></td><td>15</td><td>16</td>
+      </tr>
+      <tr>
+        <td>17</td><td id="today">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+      </tr>
+      <tr>
+        <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+        <td></td><td></td>
+      </tr>
+      </tbody>
+    </table>
 
-</section>
+  </section>
 
 
-<section id="sidebar-older-post">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><strong>Older Post</strong></p>
-  </div> <!-- .ccr-gallery-ttile -->
-  <ul>
-    <li>
-      <img src="<%= image_path("sports-thumb-10.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("thumbnail-small-7.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("sports-thumb-5.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("thumbnail-small-2.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-    <li>
-      <img src="<%= image_path("thumbnail-small-5.jpg") %>" alt="Avatar">
-      <a href="#">This is the first popular post</a>
-      <div class="date-like-comment">
-        <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
-        <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
-        <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
-      </div>
-    </li>
-  </ul>
-
-</section> <!-- /#sidebar-older-post -->
-
-<section id="sidebar-entertainment-post">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><strong>Entertainment</strong></p>
-  </div> <!-- .ccr-gallery-ttile -->
-
-  <div class="sidebar-entertainment">
-    <img src="<%= image_path("entertainment.jpg") %>" alt="entertainment">
-    <a href="#">Miss Joly loves you to share her tell. Are you ready?</a>
-  </div>
-  <div class="date-like-comment">
-    <a href="#" class="like"><i class="fa fa-thumbs-o-up"></i> 08</a>
-    <a href="#" class="comments"><i class="fa fa-comments-o"></i> 49</a>
-  </div>
-</section>  <!-- /#sidebar-entertainment-post -->
 
 
-<section id="ccr-sidebar-add-place">
-  <div class="sidebar-add-place">
-    370x250 px
-  </div>
-</section> <!-- /#ccr-sidebar-add-place -->
+
+  <section id="ccr-sidebar-add-place">
+    <div class="sidebar-add-place">
+      370x250 px
+    </div>
+  </section> <!-- /#ccr-sidebar-add-place -->
 
 
-<section id="ccr-sidebar-newslater">
+  <section id="ccr-sidebar-newslater">
 
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><label for="sb-newslater"><strong>Newslater</strong></label></p>
-  </div> <!-- .ccr-gallery-ttile -->
+    <div class="ccr-gallery-ttile">
+      <span></span>
+      <p><label for="sb-newslater"><strong>Nhận tin mới</strong></label></p>
+    </div> <!-- .ccr-gallery-ttile -->
 
-  <div class="sidebar-newslater-form">
-    <form class="ccr-gallery-ttile" action="#">
-      <input type="email" id="sb-newslater" name="sb-newslater" placeholder="Enter your email address" required>
-      <button type="submit">Subscribe</button>
+    <div class="sidebar-newslater-form">
+      <form class="ccr-gallery-ttile" action="#">
+        <input type="email" id="sb-newslater" name="sb-newslater" placeholder="Nhập email của bạn" required>
+        <button type="submit">Theo dõi</button>
 
-    </form>
-  </div> <!-- /.sidebar-newslater-form -->
+      </form>
+    </div> <!-- /.sidebar-newslater-form -->
 
-</section> <!-- /#ccr-sidebar-newslater -->
+  </section> <!-- /#ccr-sidebar-newslater -->
 
-<section id="ccr-find-on-fb">
-  <div class="find-fb-title">
-    <span><i class="fa fa-facebook"></i></span> Find us on Facebook
-  </div> <!-- /.find-fb-title -->
-  <div class="find-on-fb-body">
-
-    <div class="fb-like-box" data-href="https://www.facebook.com/codexcoderltd/" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-
-  </div> <!-- /.find-on-fb-body -->
-</section> <!-- /#ccr-find-on-fb -->
 
 
 </aside><!-- / .col-md-4  / #ccr-right-section -->
@@ -751,55 +559,56 @@
 
     <ul>
       <li class="col-md-3">
-        <h5>About Us</h5>
+        <h5>Giới thiệu</h5>
         <div class="about-us">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quod, nostrum, corrupti, maxime quis doloribus debitis id consectetur laudantium iure aperiam soluta consequuntur modi accusamus molestias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quod, nostrum, corrupti, maxime quis doloribus debitis id consectetur laudantium iure aperiam soluta consequuntur modi accusamus molestias Ab veniam atque eius...
+          Website cung cấp thông tin về các Trường Đại học đứng đầu trên Thế Giới
+          tính đến năm 2014
         </div>
         <div class="site-logo">
-          <a href="index.html"><img src="<%= image_path("logo.png") %>" alt="Side Logo" /><h1>Daily <span>News</span></h1><h3>The Daily News Source</h3></a>
+          <a href="index.html"><img src="img/logo.png" alt="Side Logo" /><h1>Top <span><h3> Universities</h3></span></h1></a>
         </div> <!-- / .navbar-header -->
 
       </li>
       <li class="col-md-3">
-        <h5>Popular Post</h5>
+        <h5>Bài đọc nhiều nhất</h5>
         <ul>
           <li>
-            <img src="<%= image_path("thumbnail-small-1.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Popular Post</a>
+            <img src="img/top10.jpg" alt="Avatar">
+            <a href="#">10 trường Cao đẳng nghệ thuật tốt nhất thế giới </a>
           </li>
           <li>
-            <img src="<%= image_path("sports-thumb-4.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Popular Post</a>
+            <img src="img/loikhuyen.jpg" alt="Avatar">
+            <a href="#">Những lời khuyên sinh viên năm nhất không thể bỏ qua </a>
           </li>
           <li>
-            <img src="<%= image_path("thumbnail-small-3.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Popular Post</a>
+            <img src="img/top15.jpg" alt="Avatar">
+            <a href="#">Top 15 trường đại học hàng đầu thế giới</a>
           </li>
           <li>
-            <img src="<%= image_path("thumbnail-small-5.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Popular Post</a>
+            <img src="img/3lydo.png" alt="Avatar">
+            <a href="#">3 lý do nên học giỏi tiếng Anh</a>
           </li>
         </ul>
 
       </li>
       <li class="col-md-3">
-        <h5>Recent Post</h5>
+        <h5>Bài mới nhất</h5>
         <ul>
           <li>
-            <img src="<%= image_path("thumbnail-small-8.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Recent Post</a>
+            <img src="img/thumbnail-small-8.jpg" alt="Avatar">
+            <a href="#">Sự thật về nước Mỹ qua lời kể của một du học sinh Trung Quốc </a>
           </li>
           <li>
-            <img src="<%= image_path("sports-thumb-6.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Recent Post</a>
+            <img src="img/london.jpg" alt="Avatar">
+            <a href="#">London và những chốn “phải ghé” cho túi tiền sinh viên </a>
           </li>
           <li>
-            <img src="<%= image_path("thumbnail-small-7.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Recent Post</a>
+            <img src="img/thumbnail-small-7.jpg" alt="Avatar">
+            <a href="#">Nhân văn, Kinh tế - Chính trị và Y khoa – 3 nhóm ngành nên học ở Anh </a>
           </li>
           <li>
-            <img src="<%= image_path("thumbnail-small-6.jpg") %>" alt="Avatar">
-            <a href="#">Lorem Ipsum is a samply dummy text of Recent Post</a>
+            <img src="img/thumbnail-small-6.jpg" alt="Avatar">
+            <a href="#">Tóm lại là du học Mỹ tốn chừng này tiền…</a>
           </li>
         </ul>
 
@@ -807,22 +616,22 @@
       <li class="col-md-3">
         <h5>Tags</h5>
         <div class="tagcloud">
-          <a href="#">Football</a>
-          <a href="#">Games</a>
-          <a href="#">World News</a>
-          <a href="#">USA</a>
-          <a href="#">Salman</a>
-          <a href="#">Masrafi</a>
-          <a href="#">Afgan</a>
-          <a href="#">Obama</a>
-          <a href="#">t20</a>
-          <a href="#">Business</a>
-          <a href="#">Education</a>
-          <a href="#">Lorem</a>
-          <a href="#">Dhaka</a>
-          <a href="#">BBC</a>
-          <a href="#">Poland</a>
-          <a href="#">Technology</a>
+          <a href="#">Top University</a>
+          <a href="#">Châu Á</a>
+          <a href="#">Yeji</a>
+          <a href="#">Châu Mỹ</a>
+          <a href="#">Châu Âu</a>
+          <a href="#">Đại học</a>
+          <a href="#">Cambridge</a>
+          <a href="#">Châu Úc</a>
+          <a href="#">Harvard</a>
+          <a href="#">Giáo dục</a>
+          <a href="#">Công nghệ</a>
+          <a href="#">Du học</a>
+          <a href="#">Oxford</a>
+          <a href="#">MIT</a>
+          <a href="#">Columbia</a>
+          <a href="#">Singapore</a>
         </div>
 
       </li>
@@ -835,26 +644,10 @@
 <footer id="ccr-footer">
   <div class="container">
     <div class="copyright">
-      &copy; 2014, Copyrights <a href="http://codexcoder.com">CodexCoder</a> Theme. All Rights Reserved
+      &copy; 2014, Copyrights <a href="http://codexcoder.com">Top Universities</a>. All Rights Reserved
     </div> <!-- /.copyright -->
 
-    <div class="footer-social-icons">
-      <ul>
-        <li>
-          <a href="#"  class="google-plus"><i class="fa fa-google-plus"></i></a>
-        </li>
-        <li >
-          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li >
-          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li >
-          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        </li>
-      </ul>
 
-    </div><!--  /.cocial-icons -->
 
   </div> <!-- /.container -->
 </footer>  <!-- /#ccr-footer -->

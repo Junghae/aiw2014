@@ -5,14 +5,337 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-<!-- device notice - add later
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
--->
+<header id="ccr-header">
+  <section id="ccr-nav-top" class="fullwidth">
+    <div class="">
+      <div class="container">
+        <nav class="top-menu">
+          <ul class="right-top-menu pull-right">
+            <li><a href="#">Đăng nhập</a></li>
+            <li><a href="#">Đăng ký</a></li>
+            <li>
+              <form class="form-inline" role="form" action="#">
+                <input type="search" placeholder="Search here..." required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul> <!--  /.right-top-menu -->
+        </nav> <!-- /.top-menu -->
+      </div>
+    </div>
+  </section> <!--  /#ccr-nav-top  -->
 
-<%= yield %>
+  <section id="ccr-site-title">
+    <div class="container">
+      <div class="site-logo">
+        <a href="index.html" class="navbar-brand">
+          <%= image_tag("logo.png") %>
+          <h1>Top <span>Universities</span></h1>
+        </a>
+      </div> <!-- / .navbar-header -->
+
+      <div class="add-space">
+        Worldwide university rankings, guides & events
+      </div> <!-- / .adspace -->
+
+    </div>	<!-- /.container -->
+  </section> <!-- / #ccr-site-title -->
+
+  <section id="ccr-nav-main">
+    <nav class="main-menu">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+
+        <div class="collapse navbar-collapse ccr-nav-main">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <%= link_to_unless_current("Trang chủ", home_index_path )%></i>
+            </li>
+            <li class="">
+              <%= link_to_unless_current("Giới thiệu", home_introduction_path )%>
+            </li>
+            <li class="">
+              <%= link_to_unless_current("Tin tức", home_news_path )%>
+            </li>
+            <li class="dropdown">
+              <%= link_to_unless_current("Khu vực", "#")%>
+              <ul class="sub-menu">
+                <li><%= link_to("Châu Á",   home_asia_path)%></li>
+                <li><%= link_to("Châu Âu",  home_europe_path)%></li>
+                <li><%= link_to("Châu Mỹ",  home_america_path)%></li>
+                <li><%= link_to("Châu Úc",  home_australia_path)%></li>
+              </ul><!-- /.sub-menu -->
+            </li><!-- /.dropdown -->
+
+            <li class="">
+              <%= link_to_unless_current("Xếp hạng",home_ranking_path )%>
+            </li><!-- /.dropdown -->
+
+            <li class="">
+              <%= link_to_unless_current("Liên hệ", home_contact_path)%>
+            </li>
+          </ul> <!-- /  .nav -->
+        </div><!-- /  .collapse .navbar-collapse  -->
+
+      </div>	<!-- /.container -->
+    </nav> <!-- /.main-menu -->
+  </section> <!-- / #ccr-nav-main -->
+
+  <section id="ccr-nav-below-main">
+    <nav class="second-menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+      </div><!-- /.container -->
+    </nav><!-- /.second-menu -->
+  </section><!-- / #ccr-nav-below-main -->
+</header> <!-- /#ccr-header -->
+
+<section id="ccr-main-section">
+  <div class="container">
+    <section id="ccr-left-section" class="col-md-8">
+
+      <%= yield %>
+
+
+    </section><!-- /.col-md-8 / #ccr-left-section -->
+
+    <aside id="ccr-right-section" class="col-md-4 ccr-home">
+      <section id="sidebar-older-post">
+        <div class="ccr-gallery-ttile">
+          <span></span>
+          <p><strong>Bài đọc nhiều nhất</strong></p>
+        </div> <!-- .ccr-gallery-ttile -->
+        <ul>
+          <li>
+            <img src="img/top10.jpg" alt="Avatar">
+            <a href="#">10 trường Cao đẳng nghệ thuật tốt nhất thế giới</a>
+            <div class="date-like-comment">
+              <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+              <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+              <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/thumbnail-small-7.jpg" alt="Avatar">
+            <a href="#">Những lời khuyên sinh viên năm nhất không thể bỏ qua </a>
+            <div class="date-like-comment">
+              <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+              <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+              <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/top15.jpg" alt="Avatar">
+            <a href="#">Top 15 trường đại học hàng đầu thế giới</a>
+            <div class="date-like-comment">
+              <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+              <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+              <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/3lydo.png" alt="Avatar">
+            <a href="#">3 lý do nên học giỏi tiếng Anh</a>
+            <div class="date-like-comment">
+              <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+              <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+              <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+            </div>
+          </li>
+          <li>
+            <img src="img/thumbnail-small-5.jpg" alt="Avatar">
+            <a href="#">Top 100 Trường Đại Học Tốt Nhất Thế Giới</a>
+            <div class="date-like-comment">
+              <span class="date"><time datetime="2014-02-17">2014-02-17</time></span>
+              <a class="like" href="#"><i class="fa fa-thumbs-o-up"></i> 08</a>
+              <a class="comments" href="#"><i class="fa fa-comments-o"></i> 49</a>
+            </div>
+          </li>
+        </ul>
+      </section> <!-- /#sidebar-older-post -->
+
+      <section id="sidebar-video-post">
+        <div class="ccr-gallery-ttile">
+          <span></span>
+          <p><strong>Video Post</strong></p>
+        </div> <!-- .ccr-gallery-ttile -->
+
+        <div class="sidebar-video">
+          <iframe width="340" height="195"
+                  src="//www.youtube.com/embed/yVQZpAwpcTw" frameborder="0" allowfullscreen></iframe>
+          Top 10 Universities In the World 2013-2014
+        </div>
+      </section>  <!-- /#sidebar-video-post -->
+
+      <section id="ccr-calender">
+
+        <table id="calendar">
+          <caption >February 2014</caption>
+          <thead data-iceapc="1">
+          <tr>
+            <th scope="col" title="Monday">M</th>
+            <th scope="col" title="Tuesday">T</th>
+            <th scope="col" title="Wednesday">W</th>
+            <th scope="col" title="Thursday">T</th>
+            <th scope="col" title="Friday">F</th>
+            <th scope="col" title="Saturday">S</th>
+            <th scope="col" title="Sunday">S</th>
+          </tr>
+          </thead>
+
+          <tfoot data-iceapc="4">
+          <tr data-iceapc="3">
+            <td colspan="3" id="prev"><a href="#" title="Previous">&laquo; Jan</a></td>
+            <td class="pad">&nbsp;</td>
+            <td colspan="3" id="next" class="pad"><a href="#" title="Next">Mar &raquo;</a></td>
+          </tr>
+          </tfoot>
+
+          <tbody>
+          <tr>
+            <td></td><td></td><td></td><td></td><td></td><td>1</td><td >2</td>
+          </tr>
+          <tr>
+            <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+          </tr>
+          <tr>
+            <td>10</td><td>11</td><td>12</td><td>13</td><td><a href="#" title="Post">14</a></td><td>15</td><td>16</td>
+          </tr>
+          <tr>
+            <td>17</td><td id="today">18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+          </tr>
+          <tr>
+            <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+            <td></td><td></td>
+          </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+      <section id="ccr-sidebar-newslater">
+        <div class="ccr-gallery-ttile">
+          <span></span>
+          <p><label for="sb-newslater"><strong>Nhận tin mới</strong></label></p>
+        </div> <!-- .ccr-gallery-ttile -->
+
+        <div class="sidebar-newslater-form">
+          <form class="ccr-gallery-ttile" action="#">
+            <input type="email" id="sb-newslater" name="sb-newslater" placeholder="Nhập email của bạn" required>
+            <button type="submit">Theo dõi</button>
+          </form>
+        </div> <!-- /.sidebar-newslater-form -->
+      </section> <!-- /#ccr-sidebar-newslater -->
+    </aside><!-- / .col-md-4  / #ccr-right-section -->
+  </div><!-- /.container -->
+</section><!-- / #ccr-main-section -->
+
+<aside id="ccr-footer-sidebar">
+  <div class="container">
+    <ul>
+      <li class="col-md-3">
+        <h5>Giới thiệu</h5>
+        <div class="about-us">
+          Website cung cấp thông tin về các Trường Đại học đứng đầu trên Thế Giới
+          tính đến năm 2014
+        </div>
+        <div class="site-logo">
+          <a href="index.html"><%= image_tag("logo.png") %><h1>Top <span><h3> Universities</h3></span></h1></a>
+        </div> <!-- / .navbar-header -->
+      </li>
+
+      <li class="col-md-3">
+        <h5>Bài đọc nhiều nhất</h5>
+        <ul>
+          <li>
+            <img src="img/top10.jpg" alt="Avatar">
+            <a href="#">10 trường Cao đẳng nghệ thuật tốt nhất thế giới </a>
+          </li>
+          <li>
+            <img src="img/loikhuyen.jpg" alt="Avatar">
+            <a href="#">Những lời khuyên sinh viên năm nhất không thể bỏ qua </a>
+          </li>
+          <li>
+            <img src="img/top15.jpg" alt="Avatar">
+            <a href="#">Top 15 trường đại học hàng đầu thế giới</a>
+          </li>
+          <li>
+            <img src="img/3lydo.png" alt="Avatar">
+            <a href="#">3 lý do nên học giỏi tiếng Anh</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="col-md-3">
+        <h5>Bài mới nhất</h5>
+        <ul>
+          <li>
+            <img src="img/thumbnail-small-8.jpg" alt="Avatar">
+            <a href="#">Sự thật về nước Mỹ qua lời kể của một du học sinh Trung Quốc </a>
+          </li>
+          <li>
+            <img src="img/london.jpg" alt="Avatar">
+            <a href="#">London và những chốn “phải ghé” cho túi tiền sinh viên </a>
+          </li>
+          <li>
+            <img src="img/thumbnail-small-7.jpg" alt="Avatar">
+            <a href="#">Nhân văn, Kinh tế - Chính trị và Y khoa – 3 nhóm ngành nên học ở Anh </a>
+          </li>
+          <li>
+            <img src="img/thumbnail-small-6.jpg" alt="Avatar">
+            <a href="#">Tóm lại là du học Mỹ tốn chừng này tiền…</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="col-md-3">
+        <h5>Tags</h5>
+        <div class="tagcloud">
+          <a href="#">Top University</a>
+          <a href="#">Châu Á</a>
+          <a href="#">Yeji</a>
+          <a href="#">Châu Mỹ</a>
+          <a href="#">Châu Âu</a>
+          <a href="#">Đại học</a>
+          <a href="#">Cambridge</a>
+          <a href="#">Châu Úc</a>
+          <a href="#">Harvard</a>
+          <a href="#">Giáo dục</a>
+          <a href="#">Công nghệ</a>
+          <a href="#">Du học</a>
+          <a href="#">Oxford</a>
+          <a href="#">MIT</a>
+          <a href="#">Columbia</a>
+          <a href="#">Singapore</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aside> <!-- /#ccr-footer-sidebar -->
+
+<footer id="ccr-footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; 2014, Copyrights <a href="http://codexcoder.com">Top Universities</a>. All Rights Reserved
+    </div> <!-- /.copyright -->
+  </div> <!-- /.container -->
+</footer>  <!-- /#ccr-footer -->
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
 
 </body>
 </html>

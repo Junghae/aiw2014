@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use Mysql
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.17'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -31,6 +31,9 @@ gem 'devise'
 # ActiveAdmin
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
+gem 'tzinfo-data'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,6 +42,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'tinymce-rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
