@@ -1,0 +1,33 @@
+<div class="ccr-last-update">
+  <div class="update-ribon">Tin tức</div> <!-- /.update-ribon -->
+  <span class="update-ribon-right"></span> <!-- /.update-ribon-left -->
+  <div class="update-right-border"></div> <!-- /.update-right-border -->
+</div> <!-- / .ccr-last-update -->
+
+
+<section id="ccr-world-news">
+  <% @news.each do |news| %>
+      <section class="featured-world-news">
+        <div class="featured-world-news-img"><%=image_tag "news.image", :alt => news.image %></div>
+        <div class="featured-world-news-post">
+          <h5><%= news.title %> </h5>
+          <%= truncate(news.content, length: 500, separator: ' ' ) %>
+          <div class="like-comment-readmore">
+
+            <%= link_to "Đọc thêm", {:action => 'news_detail', :id => news.id}, :class => "read-more" %>
+
+          </div> <!-- /.like-comment-readmore -->
+        </div>
+      </section> <!-- /#featured-world-news -->
+
+
+  <% end %>
+
+
+</section> <!-- / #ccr-world-news -->
+<section class="bottom-border"></section>
+
+
+
+
+

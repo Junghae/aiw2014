@@ -1,1 +1,33 @@
-<h1>régfbjfn</h1>
+<div class="ccr-last-update">
+  <div class="update-ribon">Châu Á</div> <!-- /.update-ribon -->
+  <span class="update-ribon-right"></span> <!-- /.update-ribon-left -->
+  <div class="update-right-border"></div> <!-- /.update-right-border -->
+</div> <!-- / .ccr-last-update -->
+
+
+<section id="ccr-world-news">
+  <% @asia.each do |asia| %>
+      <section class="featured-world-news">
+        <div class="featured-world-news-img"><%=image_tag asia.image_url%></div>
+        <div class="featured-world-news-post">
+          <h5><%= asia.name %> </h5>
+          <%= truncate(asia.description, length: 500, separator: ' ' ) %>
+          <div class="like-comment-readmore">
+
+            <%= link_to "Đọc thêm", {:action => 'index'}, :class => "read-more" %>
+
+          </div> <!-- /.like-comment-readmore -->
+        </div>
+      </section> <!-- /#featured-world-news -->
+
+
+  <% end %>
+
+
+</section> <!-- / #ccr-world-news -->
+<section class="bottom-border"></section>
+
+
+
+
+

@@ -15,13 +15,15 @@ ActiveAdmin.register SlideImage do
   #   permitted
   # end
 
-  form do |f|
+  form :html => {:multipart => true} do |f|
     f.inputs do
       f.input :name
-      f.input :location, :as => :file
+      f.file_field :location
       f.input :description
 
     end
     f.actions
   end
+
+
 end

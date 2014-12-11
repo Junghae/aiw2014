@@ -49,3 +49,7 @@ gem 'tinymce-rails'
 # gem 'debugger', group: [:development, :test]
 
 gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'

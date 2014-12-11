@@ -15,4 +15,6 @@ ActiveAdmin.register UniversityCate do
   # end
 
 
+
+
 end

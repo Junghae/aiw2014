@@ -14,6 +14,16 @@ ActiveAdmin.register News do
   #   permitted
   # end
 
+  index do
+    selectable_column
+    id_column
+    column :title
+    column :image
+    column :created_at
+    column :updated_at
+    actions
+  end
+
   form do |f|
     f.inputs do
       f.input :title

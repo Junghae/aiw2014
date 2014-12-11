@@ -1,31 +1,50 @@
 ActiveAdmin.register University do
 
-  permit_params :name, :establish_year, :address, :contact, :description, :image
+    permit_params :university_cate_id, :name, :establish_year, :address, :contact, :description, :image
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
+    # See permitted parameters documentation:
+    # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
+    #
+    # permit_params :list, :of, :attributes, :on, :model
+    #
+    # or
+    #
+    # permit_params do
+    #   permitted = [:permitted, :attributes]
+    #   permitted << :other if resource.something?
+    #   permitted
+    # end
 
-  form do |f|
-    f.inputs do
-      f.input :university_cate_id, :as => :select, :collection => UniversityCate.all, :label => "Category"
-      f.input :name
-      f.input :establish_year, :label => "Establish Year"
-      f.input :address
-      f.input :contact
-      f.input :image, :as => :file
-      f.input :description
-
+    show do |ad|
+      attributes_table do
+        row :id
+        row :university_cate_id
+        row :name
+        row :establish_year
+        row :address
+        row :contact
+        row :description
+        row :image do
+          image_tag university.image_url(:thumb)
+        end
+        row :created_at
+        row :updated_at
+      end
+      active_admin_comments
     end
-    f.actions
+
+
+
+    form :html => {:multipart => true} do |f|
+      f.inputs do
+        f.input :university_cate_id, :as => :select, :collection => UniversityCate.all, :label => "Category"
+        f.input :name, required: true
+        f.input :establish_year, :label => "Establish Year", required: true
+        f.input :address, required: true
+        f.input :contact, required: true
+        f.input :image, :as => :file
+        f.input :description, as: :wysihtml5
+      end
+      f.actions
+    end
   end
-end

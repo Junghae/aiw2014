@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'home/australia'
   get 'home/ranking'
   get 'home/contact'
-
+  get 'home/news_detail'
 
 
 

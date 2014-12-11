@@ -8,11 +8,12 @@ class HomeController < ApplicationController
   end
 
   def news
-
+    @news = News.all
   end
 
   def asia
-
+    @cate = UniversityCate.all
+    @asia = University.where(:university_cate_id => '1')
   end
 
   def europe
@@ -35,17 +36,13 @@ class HomeController < ApplicationController
 
   end
 
-
-
-
-
-  def categories
-
+  def news_detail
+    @news_detail = News.find(params[:id])
   end
 
-  def details
 
-  end
+
+
 
   def search
 
