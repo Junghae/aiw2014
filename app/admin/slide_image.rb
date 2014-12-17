@@ -15,11 +15,26 @@ ActiveAdmin.register SlideImage do
   #   permitted
   # end
 
+  show do |ad|
+    attributes_table do
+      row :id
+      row :name
+      row :location do
+        image_tag slide_image.location_url(:thumb)
+      end
+      row :description
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
+
+
   form :html => {:multipart => true} do |f|
     f.inputs do
       f.input :name
-      f.file_field :location
-      f.input :description
+      f.input :location, :as => :file
+      f.input :description, as: :wysihtml5
 
     end
     f.actions

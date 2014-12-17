@@ -8,10 +8,10 @@
 <section id="ccr-world-news">
   <% @news.each do |news| %>
       <section class="featured-world-news">
-        <div class="featured-world-news-img"><%=image_tag "news.image", :alt => news.image %></div>
+        <div class="featured-world-news-img"><%=image_tag "news.image" %></div>
         <div class="featured-world-news-post">
           <h5><%= news.title %> </h5>
-          <%= truncate(news.content, length: 500, separator: ' ' ) %>
+          <%= truncate(news.content, length: 500, separator: ' ' ).html_safe %>
           <div class="like-comment-readmore">
 
             <%= link_to "Đọc thêm", {:action => 'news_detail', :id => news.id}, :class => "read-more" %>

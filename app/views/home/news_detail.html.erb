@@ -5,5 +5,13 @@
 </div> <!-- / .ccr-last-update -->
 
 
-
-<%= @news_detail.title %>
+</br>
+</br>
+<strong><%= @news_detail.title %></strong>
+</br>
+<strong><%= @news_detail.created_at %></strong>
+</hr>
+</br>
+<%= @news_detail.content.html_safe %>
+</hr>
+<%= @news_detail.credit %>

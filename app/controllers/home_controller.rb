@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  @university_cate = UniversityCate.all
   def index
 
   end

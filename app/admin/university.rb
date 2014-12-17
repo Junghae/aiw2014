@@ -15,6 +15,18 @@ ActiveAdmin.register University do
     #   permitted
     # end
 
+    index do
+      selectable_column
+      id_column
+      column "Area", :university_cate
+      column :name
+      column :establish_year
+      column :address
+      column :created_at
+      column :updated_at
+      actions
+    end
+
     show do |ad|
       attributes_table do
         row :id
