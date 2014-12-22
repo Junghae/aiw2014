@@ -4,14 +4,13 @@
   <div class="update-right-border"></div> <!-- /.update-right-border -->
 </div> <!-- / .ccr-last-update -->
 
-
 <section id="ccr-world-news">
   <% @news.each do |news| %>
       <section class="featured-world-news">
-        <div class="featured-world-news-img"><%=image_tag "news.image" %></div>
+        <div class="featured-world-news-img"><%=image_tag news.image %></div>
         <div class="featured-world-news-post">
-          <h5><%= news.title %> </h5>
-          <%= truncate(news.content, length: 500, separator: ' ' ).html_safe %>
+          <h5><%=link_to news.title, {:action => 'news_detail', :id => news.id}%> </h5>
+          <%= truncate(strip_tags(news.content.html_safe), :length => 300, :separator => ' ' ) %>
           <div class="like-comment-readmore">
 
             <%= link_to "Đọc thêm", {:action => 'news_detail', :id => news.id}, :class => "read-more" %>
@@ -27,6 +26,7 @@
 </section> <!-- / #ccr-world-news -->
 <section class="bottom-border"></section>
 
+<p align="center"><%= will_paginate @news, :class => 'flickr_pagination' %></p>
 
 
 

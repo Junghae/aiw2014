@@ -4,14 +4,14 @@
   <div class="update-right-border"></div> <!-- /.update-right-border -->
 </div> <!-- / .ccr-last-update -->
 
-
-</br>
-</br>
-<strong><%= @news_detail.title %></strong>
-</br>
-<strong><%= @news_detail.created_at %></strong>
-</hr>
-</br>
-<%= @news_detail.content.html_safe %>
-</hr>
-<%= @news_detail.credit %>
+<div id="abc">
+  </br>
+  <p id="title"><%= @news_detail.title %></p>
+  </br>
+  <i><%= @news_detail.created_at %></i>
+  <hr/>
+  </br>
+  <%= @news_detail.content.html_safe %>
+  </hr>
+  <p align="right"><b><i><%= @news_detail.credit %></i></b></p>
+</div>

@@ -35,7 +35,9 @@ ActiveAdmin.register University do
         row :establish_year
         row :address
         row :contact
-        row :description
+        row :description do |m|
+          m.description.html_safe
+        end
         row :image do
           image_tag university.image_url(:thumb)
         end
@@ -52,10 +54,10 @@ ActiveAdmin.register University do
         f.input :university_cate_id, :as => :select, :collection => UniversityCate.all, :label => "Category"
         f.input :name, required: true
         f.input :establish_year, :label => "Establish Year", required: true
-        f.input :address, required: true
-        f.input :contact, required: true
+        f.input :address, required: true, :label => 'Nation'
+        f.input :contact, required: true, as: :wysihtml5, commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :video, :source], block: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
         f.input :image, :as => :file
-        f.input :description, as: :wysihtml5
+        f.input :description, as: :wysihtml5, height: :huge , commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :video, :source], block: [:h1, :h2, :h3, :h4, :h5, :h6, :p]
       end
       f.actions
     end

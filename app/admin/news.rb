@@ -1,10 +1,10 @@
 ActiveAdmin.register News do
-  permit_params :title, :content, :credit, :image
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  # permit_params :list, :of, :attributes, :on, :model
+  permit_params :title, :content, :credit, :image
   #
   # or
   #
@@ -13,6 +13,15 @@ ActiveAdmin.register News do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+  form :html => {:multipart => true} do |f|
+    f.inputs do
+      f.input :title
+      f.input :content, as: :wysihtml5,commands: [:bold, :italic, :underline, :ul, :ol, :outdent, :indent, :link, :image, :video, :source]
+      f.input :credit
+      f.input :image, :as => :file
+    end
+    f.actions
+  end
 
   index do
     selectable_column
@@ -33,23 +42,12 @@ ActiveAdmin.register News do
       end
       row :credit
       row :image do
-        image_tag image_url(:thumb)
+        image_tag news.image_url(:thumb)
       end
       row :created_at
       row :updated_at
     end
     active_admin_comments
-  end
-
-
-  form do |f|
-    f.inputs do
-      f.input :title
-      f.input :content, as: :wysihtml5
-      f.input :credit
-      f.input :image, :as => :file
-     end
-    f.actions
   end
 
 end

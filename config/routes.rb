@@ -4,13 +4,12 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/introduction'
   get 'home/news'
-  get 'home/asia'
-  get 'home/europe'
-  get 'home/america'
-  get 'home/australia'
   get 'home/ranking'
   get 'home/contact'
   get 'home/news_detail'
+
+  get 'home/area'
+  get 'home/university'
 
 
 

@@ -1,0 +1,18 @@
+
+<div id="abc">
+  <br/>
+  <p id="title"><%= @university.name %></p>
+  </br>
+  <i><%= @university.created_at %></i>
+  <hr/>
+
+  <p><b>1. Năm thành lập: </b><%= @university.establish_year %></p>
+  <p><b>2. Quốc gia: </b><%= @university.address %></p>
+  <p><b>2. Liên hệ: </b><br/><%= @university.contact.html_safe %></p>
+
+  <hr/>
+  <%= @university.description.html_safe%>
+
+  </hr>
+</div>
+

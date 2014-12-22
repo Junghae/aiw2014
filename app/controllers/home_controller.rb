@@ -1,6 +1,13 @@
 class HomeController < ApplicationController
-  @university_cate = UniversityCate.all
   def index
+    @slide = SlideImage.order('created_at DESC').limit(4)
+    @news = News.order('created_at DESC').limit(3)
+    @area = UniversityCate.all
+
+    @asia = University.where(university_cate_id: 1).last(3)
+    @europe = University.where(university_cate_id: 2).last(3)
+    @america = University.where(university_cate_id: 3).last(3)
+    @australia = University.where(university_cate_id: 4).last(3)
 
   end
 
@@ -9,23 +16,7 @@ class HomeController < ApplicationController
   end
 
   def news
-    @news = News.all
-  end
-
-  def asia
-    @cate = UniversityCate.all
-    @asia = University.where(:university_cate_id => '1')
-  end
-
-  def europe
-
-  end
-
-  def america
-
-  end
-
-  def australia
+    @news = News.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
 
   end
 
@@ -34,14 +25,22 @@ class HomeController < ApplicationController
   end
 
   def contact
-
+    render :layout => "contact"
   end
 
   def news_detail
     @news_detail = News.find(params[:id])
   end
 
+  def area
+    @cate = UniversityCate.find(params[:id])
+    @area = University.where(university_cate_id: params[:id]).order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
 
+  end
+
+  def university
+    @university = University.find(params[:id])
+  end
 
 
 
@@ -50,6 +49,6 @@ class HomeController < ApplicationController
   end
 
   def sample
-    
+
   end
 end

@@ -1,0 +1,35 @@
+<div class="ccr-last-update">
+  <div class="update-ribon">
+    <%= @cate.name %>
+  </div> <!-- /.update-ribon -->
+  <span class="update-ribon-right"></span> <!-- /.update-ribon-left -->
+  <div class="update-right-border"></div> <!-- /.update-right-border -->
+</div> <!-- / .ccr-last-update -->
+
+
+<section id="ccr-world-news">
+
+  <% @area.each do |area| %>
+      <section class="featured-world-news">
+        <div class="featured-world-news-img"><%=image_tag area.image %></div>
+        <div class="featured-world-news-post">
+          <h5><%= link_to area.name, {:action => 'university', :id => area.id} %> </h5>
+          <%= truncate(strip_tags(area.description.html_safe), :length => 200, :separator => ' ')  %>
+          <div class="like-comment-readmore">
+
+            <%= link_to "Đọc thêm", {:action => 'university', :id => area.id}, :class => "read-more" %>
+
+          </div> <!-- /.like-comment-readmore -->
+        </div>
+      </section> <!-- /#featured-world-news -->
+
+
+  <% end %>
+
+</section> <!-- / #ccr-world-news -->
+<section class="bottom-border"></section>
+
+<p align="center"><%= will_paginate @area, :class => 'flickr_pagination' %></p>
+
+
+

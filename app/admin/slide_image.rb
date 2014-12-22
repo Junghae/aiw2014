@@ -15,10 +15,10 @@ ActiveAdmin.register SlideImage do
   #   permitted
   # end
 
+
   show do |ad|
     attributes_table do
       row :id
-      row :name
       row :location do
         image_tag slide_image.location_url(:thumb)
       end
@@ -32,9 +32,8 @@ ActiveAdmin.register SlideImage do
 
   form :html => {:multipart => true} do |f|
     f.inputs do
-      f.input :name
       f.input :location, :as => :file
-      f.input :description, as: :wysihtml5
+      f.input :description
 
     end
     f.actions

@@ -53,3 +53,5 @@ gem 'mini_magick'
 
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
+
+gem 'will_paginate'

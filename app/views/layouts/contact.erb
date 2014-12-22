@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top university - Thông tin về các trường đại học hàng đầu trên thế giới</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<header id="ccr-header">
+  <section id="ccr-nav-top" class="fullwidth">
+    <div class="">
+      <div class="container">
+        <nav class="top-menu">
+          <ul class="right-top-menu pull-right">
+            <li><a href="#">Đăng nhập</a></li>
+            <li><a href="#">Đăng ký</a></li>
+            <li>
+              <form class="form-inline" role="form" action="#">
+                <input type="search" placeholder="Tìm kiếm..." required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul> <!--  /.right-top-menu -->
+        </nav> <!-- /.top-menu -->
+      </div>
+    </div>
+  </section> <!--  /#ccr-nav-top  -->
+
+  <section id="ccr-site-title">
+    <div class="container">
+      <div class="site-logo">
+        <a href="index.html" class="navbar-brand">
+          <%= image_tag("logo.jpg") %>
+        </a>
+      </div> <!-- / .navbar-header -->
+
+      <div class="add-space">
+        <%= image_tag "banner.jpg"%>
+      </div> <!-- / .adspace -->
+
+    </div>	<!-- /.container -->
+  </section> <!-- / #ccr-site-title -->
+
+  <section id="ccr-nav-main">
+    <nav class="main-menu">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+
+        <div class="collapse navbar-collapse ccr-nav-main">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <%= link_to_unless_current("Trang chủ", home_index_path )%></i>
+            </li>
+            <li class="">
+              <%= link_to_unless_current("Giới thiệu", home_introduction_path )%>
+            </li>
+            <li class="">
+              <%= link_to_unless_current("Tin tức", home_news_path )%>
+            </li>
+            <li class="dropdown">
+              <%= link_to_unless_current("Khu vực", "#")%>
+              <ul class="sub-menu">
+                <% @university_cate.each do |cate| %>
+                    <li><%= link_to cate.name, action: "area", id: cate.id %></li>
+                <% end %>
+              </ul><!-- /.sub-menu -->
+            </li><!-- /.dropdown -->
+
+            <li class="">
+              <%= link_to_unless_current("Xếp hạng",home_ranking_path )%>
+            </li><!-- /.dropdown -->
+
+            <li class="">
+              <%= link_to_unless_current("Liên hệ", home_contact_path)%>
+            </li>
+          </ul> <!-- /  .nav -->
+        </div><!-- /  .collapse .navbar-collapse  -->
+
+      </div>	<!-- /.container -->
+    </nav> <!-- /.main-menu -->
+  </section> <!-- / #ccr-nav-main -->
+
+  <section id="ccr-nav-below-main">
+    <nav class="second-menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+      </div><!-- /.container -->
+    </nav><!-- /.second-menu -->
+  </section><!-- / #ccr-nav-below-main -->
+</header> <!-- /#ccr-header -->
+
+<section id="ccr-main-section">
+  <div class="container">
+    <%= yield %>
+
+  </div><!-- /.container -->
+</section><!-- / #ccr-main-section -->
+
+<aside id="ccr-footer-sidebar">
+  <div class="container">
+    <ul>
+      <li class="col-md-3">
+        <h5>Giới thiệu</h5>
+        <div class="about-us">
+          Top University - Website cung cấp thông tin về các Trường Đại học đứng đầu trên Thế Giới
+          tính đến năm 2014
+        </div>
+
+      </li>
+
+
+      <li class="col-md-3">
+        <h5>Bài mới nhất</h5>
+        <ul>
+          <% @recent_news.each do |news| %>
+              <li>
+                <%= image_tag news.image %>
+                <%= link_to news.title %>
+              </li>
+          <% end %>
+        </ul>
+      </li>
+
+      <li class="col-md-3">
+        <h5>Tags</h5>
+        <div class="tagcloud">
+          <a href="#">Top University</a>
+          <a href="#">Châu Á</a>
+          <a href="#">Yeji</a>
+          <a href="#">Châu Mỹ</a>
+          <a href="#">Châu Âu</a>
+          <a href="#">Đại học</a>
+          <a href="#">Cambridge</a>
+          <a href="#">Châu Úc</a>
+          <a href="#">Harvard</a>
+          <a href="#">Giáo dục</a>
+          <a href="#">Công nghệ</a>
+          <a href="#">Du học</a>
+          <a href="#">Oxford</a>
+          <a href="#">MIT</a>
+          <a href="#">Columbia</a>
+          <a href="#">Singapore</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</aside> <!-- /#ccr-footer-sidebar -->
+
+<footer id="ccr-footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; 2014, Copyrights <a href="http://codexcoder.com">Top Universities</a>. All Rights Reserved
+    </div> <!-- /.copyright -->
+  </div> <!-- /.container -->
+</footer>  <!-- /#ccr-footer -->
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

@@ -3,58 +3,44 @@
   <span class="update-ribon-right"></span> <!-- /.update-ribon-left -->
   <div class="update-news-text" id="update-news-text">
     <ul id="latestUpdate">
-
-      <li><a href="#">Top 100 trường đại học tốt nhất trên thế giới</a></li>
-      <li><a href="#">ọc tốt nhất trên thế giới</a></li>
-      <li><a href="#">Three</a></li>
-      <li><a href="#">Four</a></li>
-      <li><a href="#">Five</a></li>
+        <% @news.each do |news| %>
+         <li> <marquee direction="left" behaviour="scroll"> <%= link_to news.title, {:action => 'news_detail', :id => news.id} %></marquee></li>
+        <% end %>
     </ul>
   </div> <!-- /.update-text -->
 
   <div class="update-right-border"></div> <!-- /.update-right-border -->
 </div> <!-- / .ccr-last-update -->
 
+
 <!--INDEX-->
 <section id="ccr-slide-main" class="carousel slide" data-ride="carousel">	<!--SLIDE-->
 
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item">
+    <!--<div class="active item">
       <div class="container slide-element">
         <img src="img/slide/pic1.jpg" alt="Main Slide Image 1">
         <p><a href="#">Khuôn viên Trường Đại học Oxford</a></p>
       </div> <!-- /.slide-element -->
-    </div> <!--/.active /.item -->
+   <!-- </div> <!--/.active /.item -->
 
-    <div class="item">
+    <% @slide.each_with_index do |slide, list_pos| %>
+    <% photo_class = list_pos == 0 ? "active item" : "item"%>
+      <div class=<%= photo_class %>>
       <div class="container slide-element">
-        <img src="img/slide/pic2.jpg" alt="Main Slide Image 1">
-        <p><a href="#">Đại học Cambridge</a></p>
-      </div> <!-- /.slide-element -->
-    </div> <!-- .item -->
-
-    <div class="item">
-      <div class="container slide-element">
-        <img src="img/slide/pic3.jpg" alt="Main Slide Image 1">
-        <p><a href="#">Đại học London</a></p>
-      </div> <!-- /.slide-element -->
-    </div> <!-- .item -->
-
-    <div class="item">
-      <div class="container slide-element">
-        <img src="img/slide/pic4.jpg" alt="Main Slide Image 1">
-        <p><a href="#">Lễ tốt nghiệp Đại học Harvard năm 2013</a></p>
-      </div> <!-- /.slide-element -->
-    </div> <!-- /.item -->
-
+         <%= image_tag slide.location %>
+         <p><%= link_to slide.description %></p>
+      </div>
+    </div>
+    <% end %>
 
   </div> <!-- /.carousel-inner -->
 
-  <!-- slider nav -->
+  <!-- slider nav
   <a class="carousel-control left" href="#ccr-slide-main" data-slide="prev"><i class="fa fa-arrow-left"></i></a>
   <a class="carousel-control right" href="#ccr-slide-main" data-slide="next"><i class="fa fa-arrow-right"></i></a>
-
+ -->
   <ol class="carousel-indicators">
     <li data-target="#ccr-slide-main" data-slide-to="0" class="active"></li>
     <li data-target="#ccr-slide-main" data-slide-to="1"></li>
@@ -65,205 +51,126 @@
 
 </section><!-- /#ccr-slide-main -->
 
+
+<!--TIN TỨC-->
 <section id="ccr-latest-post-gallery">
   <div class="ccr-gallery-ttile">
     <span></span>
-    <p>TIN TỨC</p>
+    <p><%= link_to 'TIN TỨC', home_news_path %></p>
   </div><!-- .ccr-gallery-ttile -->
 
+  <ul class="ccr-latest-post">
+    <% @news.each do |news| %>
+        <li>
+          <div class="ccr-thumbnail">
+            <%= image_tag news.image_url(:thumb) %>
+            <p><%= link_to "Đọc thêm", {:action => 'news_detail', :id => news.id} %></p>
+          </div>
+          <h4>
+            <%= link_to news.title,{:action => 'news_detail', :id => news.id} %>
+          </h4>
+        </li>
+    <% end %>
+  </ul> <!-- /.ccr-latest-post -->
+</section> <!--  /#ccr-latest-post-gallery  -->
+<section class="bottom-border"></section>
+
+
+
+<!--CHÂU Á-->
+  <section id="ccr-latest-post-gallery">
+    <div class="ccr-gallery-ttile">
+      <span></span>
+      <p>Châu Á</p>
+    </div><!-- .ccr-gallery-ttile -->
+
+    <ul class="ccr-latest-post">
+      <% @asia.each do |asia| %>
+          <li>
+            <div class="ccr-thumbnail">
+              <%= image_tag asia.image_url(:thumb) %>
+              <p><%= link_to "Đọc thêm", {:action => 'news_detail', :id => asia.id} %></p>
+            </div>
+            <h4>
+              <%= link_to asia.name,{:action => 'news_detail', :id => asia.id} %>
+            </h4>
+          </li>
+      <% end %>
+    </ul> <!-- /.ccr-latest-post -->
+  </section> <!--  /#ccr-latest-post-gallery  -->
+  <section class="bottom-border">    </section>
+
+
+
+<!--CHÂU Âu-->
+<section id="ccr-latest-post-gallery">
+  <div class="ccr-gallery-ttile">
+    <span></span>
+    <p>Châu Âu</p>
+  </div><!-- .ccr-gallery-ttile -->
 
   <ul class="ccr-latest-post">
-    <li>
-      <div class="ccr-thumbnail">
-        <img src="img/thumbnail1.jpg" alt="Thumbnail 1">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h4><a href="#postlink">
-        Top 100 Trường Đại Học Tốt Nhất Thế Giới
-      </a></h4>
-    </li>
-    <li>
-      <div class="ccr-thumbnail">
-        <img src="img/thumbnail2.jpg" alt="Thumbnail 1">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h4><a href="#postlink">
-        10 trường Cao đẳng nghệ thuật tốt nhất thế giới
-      </a></h4>
-    </li>
-
+    <% @europe.each do |europe| %>
+        <li>
+          <div class="ccr-thumbnail">
+            <%= image_tag europe.image_url(:thumb) %>
+            <p><%= link_to "Đọc thêm", {:action => 'news_detail', :id => europe.id} %></p>
+          </div>
+          <h4>
+            <%= link_to europe.name,{:action => 'news_detail', :id => europe.id} %>
+          </h4>
+        </li>
+    <% end %>
   </ul> <!-- /.ccr-latest-post -->
-
 </section> <!--  /#ccr-latest-post-gallery  -->
-
-<section class="bottom-border">
-</section> <!-- /#bottom-border -->
+<section class="bottom-border">    </section>
 
 
 
-<section id="ccr-sports-gallery">
+<!--CHÂU Mỹ-->
+<section id="ccr-latest-post-gallery">
   <div class="ccr-gallery-ttile">
     <span></span>
-    <p><a href="American.html"> CHÂU Á</a></p>
-  </div> <!-- .ccr-gallery-ttile -->
+    <p>Châu Mỹ</p>
+  </div><!-- .ccr-gallery-ttile -->
 
-  <section class="featured-sports-news">
-    <div class="featured-sports-newss-img"><img src="img/hongkong.jpg" alt="Thumb"></div>
-    <div class="featured-sports-news-post">
-      <h5>Đại học Hồng Kông </h5>
-      HKU có 10 khoa, 2 trường chuyên ngành và nhiều trung tâm học tập nghiên cứu. Trường Giáo Dục Chuyên môn thường xuyên (SPACE) của HKU được đánh giá là đơn vị cung cấp chương trình giáo dục thường xuyên bậc đại học lớn nhất Hồng Kông. Với đội ngũ cán bộ giảng viên hùng hậu trên 1400 người
-      <div class="like-comment-readmore">
+  <ul class="ccr-latest-post">
+    <% @america.each do |america| %>
+        <li>
+          <div class="ccr-thumbnail">
+            <%= image_tag america.image_url(:thumb) %>
+            <p><%= link_to "Đọc thêm", {:action => 'news_detail', :id => america.id} %></p>
+          </div>
+          <h4 align="center">
+            <%= link_to america.name,{:action => 'news_detail', :id => america.id} %>
+          </h4>
+        </li>
+    <% end %>
+  </ul> <!-- /.ccr-latest-post -->
+</section> <!--  /#ccr-latest-post-gallery  -->
+<section class="bottom-border">    </section>
 
-        <a class="read-more" href="#">Đọc thêm</a>
-      </div> <!-- /.like-comment-readmore -->
-    </div>
-  </section> <!-- /#featured-sports-news -->
 
-  <ul>
-    <li>
 
-      <div class="ccr-thumbnail">
-        <img src="img/backinh.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học Bắc Kinh</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/seoul.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học Quốc Gia Seoul</a></h5>
-    </li>
-
-  </ul>
-
-</section> <!-- /#ccr-sports-gallery -->
-<section class="bottom-border"></section>
-
-<section id="ccr-sports-gallery">
+<!--CHÂU Úc-->
+<section id="ccr-latest-post-gallery">
   <div class="ccr-gallery-ttile">
     <span></span>
-    <p><a href="American.html"> CHÂU MỸ</a></p>
-  </div> <!-- .ccr-gallery-ttile -->
+    <p>Châu Úc</p>
+  </div><!-- .ccr-gallery-ttile -->
 
-  <section class="featured-sports-news">
-    <div class="featured-sports-newss-img"><img src="img/harvard.jpg" alt="Thumb"></div>
-    <div class="featured-sports-news-post">
-      <h5>Đại học Harvard </h5>
-      Viện Đại học Harvard (tiếng Anh: Harvard University), còn gọi là Đại học Harvard, là một viện đại học nghiên cứu tư thục, thành viên của Liên đoàn Ivy, ở Cambridge, Massachusetts, Hoa Kỳ. Với lịch sử, tầm ảnh hưởng, và tài sản của mình, Harvard là một trong những viện đại học danh tiếng nhất thế giới
-      <div class="like-comment-readmore">
-
-        <a class="read-more" href="#">Đọc thêm</a>
-      </div> <!-- /.like-comment-readmore -->
-    </div>
-  </section> <!-- /#featured-sports-news -->
-
-  <ul>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/mit.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học MIT</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/standford.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học Standford</a></h5>
-    </li>
-
-  </ul>
-
-</section> <!-- /#ccr-sports-gallery -->
-
-<section class="bottom-border"></section>
-
-<section id="ccr-sports-gallery">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><a href="Europe.html"> CHÂU ÂU</a></p>
-  </div> <!-- .ccr-gallery-ttile -->
-
-  <section class="featured-sports-news">
-    <div class="featured-sports-newss-img"><img src="img/cambridge.jpg" alt="Thumb"></div>
-    <div class="featured-sports-news-post">
-      <h5>Đại học Cambridge</h5>
-      Viện Đại học Cambridge hay Đại học Cambridge là viện đại học nghiên cứu công lập tọa lạc tại Cambridge, Anh Quốc. Đây là viện đại học lâu đời thứ hai trong thế giới nói tiếng Anh, và là viện đại học lâu đời thứ ba trên thế giới hiện đang hoạt động
-      <div class="like-comment-readmore">
-
-        <a class="read-more" href="#">Đọc thêm</a>
-      </div> <!-- /.like-comment-readmore -->
-    </div>
-  </section> <!-- /#featured-sports-news -->
-
-  <ul>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/oxford.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học MIT</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/uclan.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học Standford</a></h5>
-    </li>
-
-  </ul>
-
-</section> <!-- /#ccr-sports-gallery -->
-<section class="bottom-border"></section>
-
-<section id="ccr-sports-gallery">
-  <div class="ccr-gallery-ttile">
-    <span></span>
-    <p><a href="Uc.html"> CHÂU ÚC</a></p>
-  </div> <!-- .ccr-gallery-ttile -->
-
-  <section class="featured-sports-news">
-    <div class="featured-sports-newss-img"><img src="img/Queensland.jpg" alt="Thumb"></div>
-    <div class="featured-sports-news-post">
-      <h5>Đại học Queensland </h5>
-      Đại học Queensland (The University of Queensland – UQ) được thành lập theo luật của Quốc hội Australia ngày 10/12/1909 để kỷ niệm 50 năm ngày thành phố Queensland được tách khỏi thuộc địa New South Wale. Đến năm 1911, UQ đón 83 sinh viên đầu tiên.
-      <div class="like-comment-readmore">
-        <a class="read-more" href="Queensland.html">Đọc thêm</a>
-      </div> <!-- /.like-comment-readmore -->
-    </div>
-  </section> <!-- /#featured-sports-news -->
-
-  <ul>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/UNSW.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học New South Wales</a></h5>
-    </li>
-    <li>
-
-      <div class="ccr-thumbnail">
-        <img src="img/Monash.jpg" alt="thumbnail-small-1.jpg">
-        <p><a href="#postlink">Đọc thêm</a></p>
-      </div>
-      <h5><a href="#">Đại học Monash</a></h5>
-    </li>
-
-  </ul>
-
-</section> <!-- /#ccr-sports-gallery -->
-<section class="bottom-border"></section>
-
-
-
+  <ul class="ccr-latest-post">
+    <% @australia.each do |australia| %>
+        <li>
+          <div class="ccr-thumbnail">
+            <%= image_tag australia.image_url(:thumb) %>
+            <p><%= link_to "Đọc thêm", {:action => 'news_detail', :id => australia.id} %></p>
+          </div>
+          <h4>
+            <%= link_to australia.name,{:action => 'news_detail', :id => australia.id} %>
+          </h4>
+        </li>
+    <% end %>
+  </ul> <!-- /.ccr-latest-post -->
+</section> <!--  /#ccr-latest-post-gallery  -->
+<section class="bottom-border">    </section>

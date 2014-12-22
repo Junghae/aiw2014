@@ -16,4 +16,5 @@
 // require_tree .
 //= require bootstrap.min
 //= require html5shiv.js
+// require jquery.datetimepicker
 //= require custom
